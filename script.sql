@@ -1,7 +1,7 @@
 
-DROP DATABASE IF EXISTS annonces;
-CREATE DATABASE annonces;
-USE annonces;
+DROP DATABASE IF EXISTS gestionsAnnonces;
+CREATE DATABASE gestionsAnnonces;
+USE gestionsAnnonces;
 
 CREATE TABLE categories(
         idCategorie      Int  Auto_increment  NOT NULL PRIMARY KEY,
@@ -37,7 +37,6 @@ CREATE TABLE annonces(
         statutAnnonce   Int NOT NULL ,
         idUtilisateur   Int NOT NULL ,
         idCategorie     Int NOT NULL
-
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -46,7 +45,7 @@ CREATE TABLE messages(
         idMessage  Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleMessage  Varchar (500) NOT NULL ,
         contenueMessage Varchar (500) NOT NULL ,
-        x  Int NOT NULL ,
+        idDestinataire Int NOT NULL,
         idUtilisateur   Int NOT NULL
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
