@@ -1,37 +1,27 @@
-#------------------------------------------------------------
-#        Script MySQL.
-#------------------------------------------------------------
 
 
-#------------------------------------------------------------
-# Table: categories
-#------------------------------------------------------------
+DROP DATABASE IF EXISTS annonces;
+CREATE DATABASE annonces;
+USE annonces;
 
 CREATE TABLE categories(
-        idCategorie      Int  Auto_increment  NOT NULL ,
+        idCategorie      Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleCaterogie Varchar (10) NOT NULL
-	,CONSTRAINT categories_PK PRIMARY KEY (idCategorie)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-#------------------------------------------------------------
-# Table: role
-#------------------------------------------------------------
+
 
 CREATE TABLE role(
-        idRole      Int  Auto_increment  NOT NULL ,
+        idRole      Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleRole Varchar (50) NOT NULL ,
         codeRole    Int NOT NULL
-	,CONSTRAINT role_PK PRIMARY KEY (idRole)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-#------------------------------------------------------------
-# Table: utilisateur
-#------------------------------------------------------------
 
 CREATE TABLE utilisateur(
-        idUtilisateur     Int  Auto_increment  NOT NULL ,
+        idUtilisateur     Int  Auto_increment  NOT NULL PRIMARY KEY,
         nomUtilisateur    Varchar (50) NOT NULL ,
         prenomutilisateur Varchar (50) NOT NULL ,
         emailUtilisateur  Varchar (50) NOT NULL ,
@@ -39,18 +29,11 @@ CREATE TABLE utilisateur(
         mdpUtilisateur    Varchar (50) NOT NULL ,
         telUtilisateur    Varchar (10) NOT NULL ,
         idRole            Int NOT NULL
-	,CONSTRAINT utilisateur_PK PRIMARY KEY (idUtilisateur)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-	,CONSTRAINT utilisateur_role_FK FOREIGN KEY (idRole) REFERENCES role(idRole)
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
-# Table: annonces
-#------------------------------------------------------------
 
 CREATE TABLE annonces(
-        idAnnonce       Int  Auto_increment  NOT NULL ,
+        idAnnonce       Int  Auto_increment  NOT NULL PRIMARY KEY,
         titreAnnonce    Varchar (50) NOT NULL ,
         lienImg         Varchar (100) NOT NULL ,
         LibelleAnnonce  Varchar (100) NOT NULL ,
@@ -59,25 +42,23 @@ CREATE TABLE annonces(
         statutAnnonce   Int NOT NULL ,
         idUtilisateur   Int NOT NULL ,
         idCategorie     Int NOT NULL
-	,CONSTRAINT annonces_PK PRIMARY KEY (idAnnonce)
 
-	,CONSTRAINT annonces_utilisateur_FK FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur)
-	,CONSTRAINT annonces_categories0_FK FOREIGN KEY (idCategorie) REFERENCES categories(idCategorie)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-#------------------------------------------------------------
-# Table: message
-#------------------------------------------------------------
 
 CREATE TABLE message(
-        idMessage       Int  Auto_increment  NOT NULL ,
+        idMessage  Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleMessage  Varchar (500) NOT NULL ,
         contenueMessage Varchar (500) NOT NULL ,
-        idDestinataire  Int NOT NULL ,
+        x  Int NOT NULL ,
         idUtilisateur   Int NOT NULL
-	,CONSTRAINT message_PK PRIMARY KEY (idMessage)
 
-	,CONSTRAINT message_utilisateur_FK FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur)
-)ENGINE=InnoDB;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE message ADD CONSTRAINT FK_message_utilisateur FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur);
+
+ALTER TABLE utilisateur ADD CONSTRAINT FK_utilisateur_role FOREIGN KEY (idRole) REFERENCES role(idRole);
+
+ALTER TABLE annonces ADD CONSTRAINT FK_annonces_utilisateur FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur);
+ALTER TABLE annonces ADD CONSTRAINT FK_annonces_categories0 FOREIGN KEY (idCategorie) REFERENCES categories(idCategorie);
