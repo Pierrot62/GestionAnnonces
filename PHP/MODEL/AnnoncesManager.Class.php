@@ -67,10 +67,9 @@ class AnnoncesManager
 		return $liste;
 	}
 
-	
 	public static function getByUser($user)
 	{
- 		$db=DbConnect::getDb();
+		$db=DbConnect::getDb();	
 		$liste = [];
 		$q=$db->query("SELECT * FROM Annonces WHERE idUtilisateur =".$user->getIdUtilisateur());
 		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
@@ -81,6 +80,21 @@ class AnnoncesManager
 			}
 		}
 		return $liste;
+	}
+
+	public static function getByCategorie($categorie)
+	{
+		$db=DbConnect::getDb();
+		$liste = [];
+		$q=$db->query("SELECT * FROM Annonces WHERE idCategorie =".$categorie->getIdCategorie());
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Annonces($donnees);
+			}
+		}
+			return $liste;
 	}
 
 }

@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `annonces` (
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `idCategorie` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `libelleCaterogie` varchar(10) NOT NULL
+  `libelleCategorie` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `messages`;

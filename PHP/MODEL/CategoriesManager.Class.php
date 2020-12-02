@@ -5,22 +5,22 @@ class CategoriesManager
 	public static function add(Categories $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("INSERT INTO Categories (libelleCaterogie) VALUES (:libelleCaterogie)");
-		$q->bindValue(":libelleCaterogie", $obj->getLibelleCaterogie());
+		$q=$db->prepare("INSERT INTO Categories (libelleCategorie) VALUES (:libelleCategorie)");
+		$q->bindValue(":libelleCategorie", $obj->getLibelleCategorie());
 		$q->execute();
 	}
 
 	public static function update(Categories $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("UPDATE Categories SET idCategorie=:idCategorie,libelleCaterogie=:libelleCaterogie WHERE idCategorie=:idCategorie");
+		$q=$db->prepare("UPDATE Categories SET idCategorie=:idCategorie,libelleCategorie=:libelleCategorie WHERE idCategorie=:idCategorie");
 		$q->bindValue(":idCategorie", $obj->getIdCategorie());
-		$q->bindValue(":libelleCaterogie", $obj->getLibelleCaterogie());
+		$q->bindValue(":libelleCategorie", $obj->getLibelleCategorie());
 		$q->execute();
 	}
 	public static function delete(Categories $obj)
 	{
- 		$db=DbConnect::getDb();
+		$db=DbConnect::getDb();
 		$db->exec("DELETE FROM Categories WHERE idCategorie=" .$obj->getIdCategorie());
 	}
 	public static function findById($id)
