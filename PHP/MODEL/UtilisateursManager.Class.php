@@ -32,7 +32,9 @@ class UtilisateursManager
 	}
 	public static function delete(Utilisateurs $obj)
 	{
- 		$db=DbConnect::getDb();
+		$db=DbConnect::getDb();
+		$db->exec("DELETE FROM messages WHERE idUtilisateur=" .$obj->getIdUtilisateur());
+		$db->exec("DELETE FROM annonces WHERE idUtilisateur=" .$obj->getIdUtilisateur()); 
 		$db->exec("DELETE FROM Utilisateurs WHERE idUtilisateur=" .$obj->getIdUtilisateur());
 	}
 	public static function findById($id)
@@ -54,12 +56,12 @@ class UtilisateursManager
 	{
  		$db=DbConnect::getDb();
 		$liste = [];
-		$q = $db->query("SELECT * FROM Utilisateurs");
+		$q = $db->query("SELECT * FROM Utilisateurs ORDER BY nomUtilisateur");
 		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
 		{
 			if($donnees != false)
 			{
-				$liste[] = new Utilisateurs($donnees);
+				$liste[] = new Utilisateurs($donnees) ;
 			}
 		}
 		return $liste;

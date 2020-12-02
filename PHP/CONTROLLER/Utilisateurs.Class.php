@@ -22,7 +22,7 @@ class Utilisateurs
 		return $this->_idUtilisateur;
 	}
 
-	public function setIdUtilisateur($idUtilisateur)
+	public function setIdUtilisateur(int $idUtilisateur)
 	{
 		$this->_idUtilisateur=$idUtilisateur;
 	}
@@ -34,7 +34,7 @@ class Utilisateurs
 
 	public function setNomUtilisateur($nomUtilisateur)
 	{
-		$this->_nomUtilisateur=$nomUtilisateur;
+		$this->_nomUtilisateur=ucfirst($nomUtilisateur);
 	}
 
 	public function getPrenomutilisateur()
@@ -44,7 +44,7 @@ class Utilisateurs
 
 	public function setPrenomutilisateur($prenomutilisateur)
 	{
-		$this->_prenomutilisateur=$prenomutilisateur;
+		$this->_prenomutilisateur=ucfirst($prenomutilisateur);
 	}
 
 	public function getEmailUtilisateur()
@@ -92,7 +92,7 @@ class Utilisateurs
 		return $this->_idRole;
 	}
 
-	public function setIdRole($idRole)
+	public function setIdRole(int $idRole)
 	{
 		$this->_idRole=$idRole;
 	}

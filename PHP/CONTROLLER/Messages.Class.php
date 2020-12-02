@@ -19,7 +19,7 @@ class Messages
 		return $this->_idMessage;
 	}
 
-	public function setIdMessage($idMessage)
+	public function setIdMessage(int $idMessage)
 	{
 		$this->_idMessage=$idMessage;
 	}
@@ -49,7 +49,7 @@ class Messages
 		return $this->_idDestinataire;
 	}
 
-	public function setIdDestinataire($idDestinataire)
+	public function setIdDestinataire(int $idDestinataire)
 	{
 		$this->_idDestinataire=$idDestinataire;
 	}
@@ -59,7 +59,7 @@ class Messages
 		return $this->_idUtilisateur;
 	}
 
-	public function setIdUtilisateur($idUtilisateur)
+	public function setIdUtilisateur(int $idUtilisateur)
 	{
 		$this->_idUtilisateur=$idUtilisateur;
 	}

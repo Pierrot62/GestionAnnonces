@@ -6,7 +6,7 @@ class Categories
 	/*****************Attributs***************** */
 
 	private $_idCategorie;
-	private $_libelleCaterogie;
+	private $_libelleCategorie;
 
 	/***************** Accesseurs ***************** */
 
@@ -16,19 +16,19 @@ class Categories
 		return $this->_idCategorie;
 	}
 
-	public function setIdCategorie($idCategorie)
+	public function setIdCategorie(int $idCategorie)
 	{
 		$this->_idCategorie=$idCategorie;
 	}
 
-	public function getLibelleCaterogie()
+	public function getLibelleCategorie()
 	{
-		return $this->_libelleCaterogie;
+		return $this->_libelleCategorie;
 	}
 
-	public function setLibelleCaterogie($libelleCaterogie)
+	public function setLibelleCategorie($libelleCategorie)
 	{
-		$this->_libelleCaterogie=$libelleCaterogie;
+		$this->_libelleCategorie=ucfirst($libelleCategorie);
 	}
 
 	/*****************Constructeur***************** */
@@ -61,7 +61,7 @@ class Categories
 	*/
 	public function toString()
 	{
-		return "IdCategorie : ".$this->getIdCategorie()."LibelleCaterogie : ".$this->getLibelleCaterogie()."\n";
+		return "IdCategorie : ".$this->getIdCategorie()."LibelleCategorie : ".$this->getLibelleCategorie()."\n";
 	}
 
 

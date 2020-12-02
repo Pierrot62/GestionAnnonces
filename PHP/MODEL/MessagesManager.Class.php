@@ -58,4 +58,34 @@ class MessagesManager
 		}
 		return $liste;
 	}
+
+	public static function getByUser($user)
+	{
+ 		$db=DbConnect::getDb();
+		$liste = [];
+		$q = $db->query("SELECT * FROM Messages WHERE idUtilisateur =".$user->getIdUtilisateur());
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Messages($donnees);
+			}
+		}
+		return $liste;
+	}
+
+	public static function getByDestinataire($user)
+	{
+ 		$db=DbConnect::getDb();
+		$liste = [];
+		$q = $db->query("SELECT * FROM Messages WHERE idDestinataire =".$user->getIdUtilisateur());
+		while($donnees = $q->fetch(PDO::FETCH_ASSOC))
+		{
+			if($donnees != false)
+			{
+				$liste[] = new Messages($donnees);
+			}
+		}
+		return $liste;
+	}
 }
