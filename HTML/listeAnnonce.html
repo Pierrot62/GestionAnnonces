@@ -31,8 +31,6 @@
 </header>
 <nav>
 
-    <div class="elmNav"><button><a href="index.html?codePage=listeAnnonce">Mes Annonces</a></button></div>
-    <!-- A cacher si pas connecter -->
     <div class="elmNav">
         <select name="categorie" id="categorie-select">
             <option value="voiture">Voiture</option>
@@ -42,17 +40,16 @@
     <div class="elmNav">
         <button>Rechercher</button>
     </div>
-    <div class="elmNav"><button><a href="">Ajouter une Annonce</a></button></div> <!-- A cacher si pas connecter -->
+    <div class="elmNav"><button>Ajouter une Annonce</button></div> <!-- A cacher si pas connecter -->
 </nav>
 
 <body>
-
+    
     <article>
         <div class="imgAnnonce"><img src="./IMG/imgAnnonce/voiture3.jpg" alt=""></div>
         <div class="divXl">
             <div class="infoAnnnonce">
                 <div>Titre de l'annonce</div>
-                <div></div>
             </div>
             <div class=" infoAnnnonce">
                 <div>Prix</div>
@@ -60,9 +57,14 @@
                 <div>Par</div>
                 <div>Statut</div>
             </div>
+            <div class="crud">
+                <div><a href="index.php?codePage=formUpdateAnnonce">Modifier</a></div>
+                <div><a href="index.php?codePage=traitementAnnonde&mode=delete">Supprimer</a></div>
+                <div><a href="index.php.codePage=viewAnnonce">Detail</a></div>
+            </div>
         </div>
-       
     </article>
+
 
 </body>
 

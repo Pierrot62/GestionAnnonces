@@ -39,6 +39,7 @@ header {
 }
 
 .titre{
+    color: white;
     font-weight: bolder;
     font-size: 1.5em;
 }
@@ -55,7 +56,8 @@ span{
 /*NAV*/
 
 nav{
-    background-color: white;
+    color: white;
+    background-color:#003A78;
     display: flex;
 }
 
@@ -125,12 +127,3 @@ article{
     color: gray;
     background-color: whitesmoke;
 }
-
-
-
-
-<div class="crud">
-                <div><a href="index.php?codePage=formUpdateAnnonce">Modifier</a></div>
-                <div><a href="index.php?codePage=traitementAnnonde&mode=delete">Supprimer</a></div>
-                <div><a href="index.php.codePage=viewAnnonce">Detail</a></div>
-            </div>
