@@ -10,6 +10,11 @@ body {
     flex: 2;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 div{
     flex: 1;
 }
@@ -30,7 +35,7 @@ header {
     text-align: center;
     display: flex;
     height: 10vh;
-    background-color: gray;
+    background-color: #0071BD;
 }
 
 .titre{
@@ -50,7 +55,7 @@ span{
 /*NAV*/
 
 nav{
-    background-color: ivory;
+    background-color: white;
     display: flex;
 }
 
@@ -58,11 +63,11 @@ nav{
 
 article{
     text-align: center;
-    padding: 0.5em;
+    padding: 1em;
     margin: 1em 0em;
     margin-left: 15vw;
     width: 70vw;
-    background-color:gray;
+    background-color: #0071BD;
     display: flex;
     min-height: 20vh;
 }
@@ -104,3 +109,28 @@ article{
 .formulaireContact{
     text-align: center;
 }
+
+.crud{
+    display: flex;
+}
+
+.crud div a{
+    
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.crud div a:hover{
+    color: gray;
+    background-color: whitesmoke;
+}
+
+
+
+
+<div class="crud">
+                <div><a href="index.php?codePage=formUpdateAnnonce">Modifier</a></div>
+                <div><a href="index.php?codePage=traitementAnnonde&mode=delete">Supprimer</a></div>
+                <div><a href="index.php.codePage=viewAnnonce">Detail</a></div>
+            </div>
