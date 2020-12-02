@@ -31,7 +31,7 @@ CREATE TABLE annonces(
         idAnnonce       Int  Auto_increment  NOT NULL PRIMARY KEY,
         titreAnnonce    Varchar (50) NOT NULL ,
         lienImg         Varchar (100) NOT NULL ,
-        LibelleAnnonce  Varchar (100) NOT NULL ,
+        libelleAnnonce  Varchar (100) NOT NULL ,
         prixAnnonce     Float NOT NULL ,
         datePublication Varchar (10) NOT NULL ,
         statutAnnonce   Int NOT NULL ,
