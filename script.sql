@@ -1,5 +1,4 @@
 
-
 DROP DATABASE IF EXISTS annonces;
 CREATE DATABASE annonces;
 USE annonces;
@@ -10,17 +9,13 @@ CREATE TABLE categories(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-
-
-CREATE TABLE role(
+CREATE TABLE roles(
         idRole      Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleRole Varchar (50) NOT NULL ,
         codeRole    Int NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-CREATE TABLE utilisateur(
+CREATE TABLE utilisateurs(
         idUtilisateur     Int  Auto_increment  NOT NULL PRIMARY KEY,
         nomUtilisateur    Varchar (50) NOT NULL ,
         prenomutilisateur Varchar (50) NOT NULL ,
@@ -47,7 +42,7 @@ CREATE TABLE annonces(
 
 
 
-CREATE TABLE message(
+CREATE TABLE messages(
         idMessage  Int  Auto_increment  NOT NULL PRIMARY KEY,
         libelleMessage  Varchar (500) NOT NULL ,
         contenueMessage Varchar (500) NOT NULL ,
@@ -56,9 +51,11 @@ CREATE TABLE message(
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE message ADD CONSTRAINT FK_message_utilisateur FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur);
+ALTER TABLE messages ADD CONSTRAINT FK_messages_utilisateurs FOREIGN KEY (idUtilisateur) REFERENCES utilisateurs(idUtilisateur);
 
-ALTER TABLE utilisateur ADD CONSTRAINT FK_utilisateur_role FOREIGN KEY (idRole) REFERENCES role(idRole);
+ALTER TABLE utilisateurs ADD CONSTRAINT FK_utilisateur_roles FOREIGN KEY (idRole) REFERENCES roles(idRole);
 
-ALTER TABLE annonces ADD CONSTRAINT FK_annonces_utilisateur FOREIGN KEY (idUtilisateur) REFERENCES utilisateur(idUtilisateur);
+ALTER TABLE annonces ADD CONSTRAINT FK_annonces_utilisateurs FOREIGN KEY (idUtilisateur) REFERENCES utilisateurs(idUtilisateur);
 ALTER TABLE annonces ADD CONSTRAINT FK_annonces_categories0 FOREIGN KEY (idCategorie) REFERENCES categories(idCategorie);
+
+
