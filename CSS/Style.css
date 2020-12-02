@@ -1,15 +1,106 @@
 /****  GENERAL ****/
-html, body {
-	margin : 0;
-	padding : 0;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
-div, header, footer, nav, article {
-	display : flex;
-	flex : 1;
+.divXl {
+    flex: 2;
 }
 
-img, video {
-	width : 100%;
+div{
+    flex: 1;
 }
 
+img,
+video {
+    height: 100%;
+}
+
+
+.colonne {
+    flex-direction: column;
+}
+
+/*HEADER*/
+
+header {
+    text-align: center;
+    display: flex;
+    height: 10vh;
+    background-color: gray;
+}
+
+.titre{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+span{
+    font-weight: bolder;
+    color: orangered;
+}
+
+.elmHeader{
+    align-self: center;
+}
+
+/*NAV*/
+
+nav{
+    background-color: ivory;
+    display: flex;
+}
+
+/*ARTICLE*/
+
+article{
+    text-align: center;
+    padding: 0.5em;
+    margin: 1em 0em;
+    margin-left: 15vw;
+    width: 70vw;
+    background-color:gray;
+    display: flex;
+    min-height: 20vh;
+}
+
+.elmNav{
+    padding: 1em;
+    text-align: center;
+}
+
+.imgAnnonce{
+    text-align: center;
+    background-color: ightseagreen;
+}
+
+.infoAnnnonce{
+    border: 1px solid black;
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    margin: 2em;
+}
+
+.imgView{
+    margin: 1em;
+    height: 40vh;
+}
+
+.buttonAnnonce{
+    display: flex;
+}
+
+.contenueAnnonce{
+    margin: 1em;
+}
+
+/*CONTACT VENDEUR*/
+
+.formulaireContact{
+    text-align: center;
+}
