@@ -29,7 +29,6 @@ $routes=[
 	"actionConnect"=>["PHP/VIEW/","ActionConnect","Action connection"],
 	"actionInscript"=>["PHP/VIEW/","ActionInscript","Action inscription"],
 
-
 	"TestannoncesManager"=>["PHP/MODEL/TESTMANAGER/","TestannoncesManager","Test de annonces"],
 	"TestcategoriesManager"=>["PHP/MODEL/TESTMANAGER/","TestcategoriesManager","Test de categories"],
 	"TestmessagesManager"=>["PHP/MODEL/TESTMANAGER/","TestmessagesManager","Test de messages"],
