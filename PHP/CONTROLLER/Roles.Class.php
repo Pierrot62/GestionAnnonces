@@ -17,7 +17,7 @@ class Roles
 		return $this->_idRole;
 	}
 
-	public function setIdRole($idRole)
+	public function setIdRole(int $idRole)
 	{
 		$this->_idRole=$idRole;
 	}
@@ -29,7 +29,7 @@ class Roles
 
 	public function setLibelleRole($libelleRole)
 	{
-		$this->_libelleRole=$libelleRole;
+		$this->_libelleRole=ucfirst($libelleRole);
 	}
 
 	public function getCodeRole()
