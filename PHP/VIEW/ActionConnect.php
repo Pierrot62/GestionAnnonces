@@ -4,18 +4,18 @@ if ($uti != false)
 {
     if ($_POST['mdpUtilisateur'] == $uti->getMdpUtilisateur())
     {
-        echo texte('connectOk');
+        echo "connection ok";
         $_SESSION['utilisateur']=$uti;
         header("refresh:3;url=Index.php?page=Accueil");
     }
     else
     {
-        echo texte('incPwd');
+        echo "mot de passe inconnu";
         header("refresh:3;url=Index.php?page=formConnect");
     }
 }
 else
 {
-    echo texte('inExist');
+    echo "emil n'existe pas";
     header("refresh:3;url=Index.php?page=formConnect");
 }

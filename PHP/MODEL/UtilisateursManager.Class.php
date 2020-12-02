@@ -72,7 +72,7 @@ class UtilisateursManager
 		$db = DbConnect::getDb();
         if (!in_array(";",str_split( $email))) // s'il n'y a pas de ; , je lance la requete
         {
-            $q = $db->query("SELECT * FROM users WHERE emailUtilisateur ='" . $email . "'");
+            $q = $db->query("SELECT * FROM utilisateurs WHERE emailUtilisateur ='" . $email . "'");
             $results = $q->fetch(PDO::FETCH_ASSOC);
             if ($results != false)
             {
