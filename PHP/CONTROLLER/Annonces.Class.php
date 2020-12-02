@@ -23,7 +23,7 @@ class Annonces
 		return $this->_idAnnonce;
 	}
 
-	public function setIdAnnonce($idAnnonce)
+	public function setIdAnnonce(int $idAnnonce)
 	{
 		$this->_idAnnonce=$idAnnonce;
 	}
@@ -63,7 +63,7 @@ class Annonces
 		return $this->_prixAnnonce;
 	}
 
-	public function setPrixAnnonce($prixAnnonce)
+	public function setPrixAnnonce(float $prixAnnonce)
 	{
 		$this->_prixAnnonce=$prixAnnonce;
 	}
@@ -83,7 +83,7 @@ class Annonces
 		return $this->_statutAnnonce;
 	}
 
-	public function setStatutAnnonce($statutAnnonce)
+	public function setStatutAnnonce(int $statutAnnonce)
 	{
 		$this->_statutAnnonce=$statutAnnonce;
 	}
@@ -93,7 +93,7 @@ class Annonces
 		return $this->_idUtilisateur;
 	}
 
-	public function setIdUtilisateur($idUtilisateur)
+	public function setIdUtilisateur(int $idUtilisateur)
 	{
 		$this->_idUtilisateur=$idUtilisateur;
 	}
@@ -103,7 +103,7 @@ class Annonces
 		return $this->_idCategorie;
 	}
 
-	public function setIdCategorie($idCategorie)
+	public function setIdCategorie(int $idCategorie)
 	{
 		$this->_idCategorie=$idCategorie;
 	}

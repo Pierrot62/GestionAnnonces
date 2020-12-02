@@ -22,7 +22,7 @@ class Utilisateurs
 		return $this->_idUtilisateur;
 	}
 
-	public function setIdUtilisateur($idUtilisateur)
+	public function setIdUtilisateur(int $idUtilisateur)
 	{
 		$this->_idUtilisateur=$idUtilisateur;
 	}
@@ -92,7 +92,7 @@ class Utilisateurs
 		return $this->_idRole;
 	}
 
-	public function setIdRole($idRole)
+	public function setIdRole(int $idRole)
 	{
 		$this->_idRole=$idRole;
 	}
