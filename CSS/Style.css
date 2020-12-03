@@ -5,9 +5,25 @@ body {
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: deeppink;
 
+    /* background-color: #091834; */
+}
+
+html{
+scroll-behavior: smooth;
+}
 .divXl {
     flex: 2;
+}
+
+.espace{
+    width: 5vh;
+}
+
+.flex{
+    display: flex;
 }
 
 a{
@@ -17,6 +33,10 @@ a{
 
 div{
     flex: 1;
+}
+
+button{
+    background-color: #F7E7D4;
 }
 
 img,
@@ -35,6 +55,7 @@ header {
     text-align: center;
     display: flex;
     height: 10vh;
+
     background-color: #0071BD;
 }
 
@@ -69,9 +90,11 @@ article{
     margin: 1em 0em;
     margin-left: 15vw;
     width: 70vw;
-    background-color: #0071BD;
+    /* background-color: #0071BD; */
+    background-color: chartreuse;
     display: flex;
     min-height: 20vh;
+    align-items: center;
 }
 
 .elmNav{
@@ -126,4 +149,46 @@ article{
 .crud div a:hover{
     color: gray;
     background-color: whitesmoke;
+}
+
+/*FORMULAIRE*/
+
+form{
+    text-align: center;
+    width: 100%;
+}
+
+input{
+    width: 60%;
+    margin: 0.5em;
+}
+
+label{
+    font-size: 1.5em;
+    color: black; /*color : white; apres  */
+}
+
+input::placeholder {  
+	text-align: center; 
+}
+input::-ms-input-placeholder {
+	text-align: center; 
+} 
+input:-ms-input-placeholder {
+	text-align: center; 
+} 
+
+.buttonForm{
+    display: flex;
+}
+
+.formAnnonce{
+    display: block;
+}
+
+.buttonMessage{
+    width: 10%;
+}
+.titreMessage{
+    width: 53%;
 }

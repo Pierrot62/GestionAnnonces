@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="ajout.css">    <!-- css contenant uniquement les modif sur cette page -->
     <title>NON DU SITE</title>
 </head>
 
 <header>
 
     <div>
-        <img src="../IMG/logo.png" alt="">
+        <img src="../../IMG/logo.png" alt="">
     </div>
     <div class="elmHeader divXl titre">La Bonne Annonce<span> .fr</span></div>
 
@@ -44,23 +45,18 @@
 </nav>
 
 <body>
-    
+
     <article>
-        <div class="imgAnnonce"><img src="../IMG/imgAnnonce/voiture3.jpg" alt=""></div>
-        <div class="divXl">
-            <div class="infoAnnnonce">
-                <div>Titre de l'annonce</div>
-            </div>
-            <div class=" infoAnnnonce">
-                <div>Prix</div>
-                <div>Mis en ligne le</div>
-                <div>Par</div>
-                <div>Statut</div>
+        <div class="divXl flex">    <!-- classe flex uniquement pour display-->
+            <div class="listeUsers flex"><!-- classe listeUsers uniquement pour mise en forme specifique-->
+                <div class="user">Nom</div>
+                <div class="user">Prenom</div>
+                <div class="user">E-mail</div>
             </div>
             <div class="crud">
-                <div><a href="index.php?codePage=formUpdateAnnonce">Modifier</a></div>
-                <div><a href="index.php?codePage=traitementAnnonde&mode=delete">Supprimer</a></div>
-                <div><a href="index.php.codePage=viewAnnonce">Detail</a></div>
+                <div><a href="index.php?codePage=traitementUtilisateur&mode=delete">Supprimer</a></div>
+                <div><a href="index.php?codePage=formUpdateUtilisateur">Modifier</a></div>
+
             </div>
         </div>
     </article>

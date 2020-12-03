@@ -1,10 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<meta charset="utf-8">
-	<title><?php echo $titre ?></title>
-	<link rel="stylesheet" href="CSS/style.css">
-	<link rel="stylesheet" href="CSS/Init.css">
-	<link rel="stylesheet" href="CSS/Phone.css">
-	<script src="./JS/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>La bonne annonce.fr</title>
 </head>
