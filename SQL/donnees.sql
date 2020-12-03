@@ -1,6 +1,6 @@
-INSERT INTO `categories`(`idCategorie`, `libelleCaterogie`) VALUES (NULL,"meubles");
-INSERT INTO `categories`(`idCategorie`, `libelleCaterogie`) VALUES (NULL,"voitures");
-INSERT INTO `categories`(`idCategorie`, `libelleCaterogie`) VALUES (NULL,"pc");
+INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"meubles");
+INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"voitures");
+INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"pc");
 
 INSERT INTO `roles`(`idRole`, `libelleRole`, `codeRole`) VALUES (NULL,"administrateur",1);
 INSERT INTO `roles`(`idRole`, `libelleRole`, `codeRole`) VALUES (NULL,"utilisateur",2);
