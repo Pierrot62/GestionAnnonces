@@ -22,3 +22,9 @@ foreach ($annonces as $uneannonce)
     </div>
     </article>';
 }
+
+
+
+
+
+'.($uneCategorie->getIdCategorie() == $annonceChoisi->getIdCategorie()) ? 'selected' : ' ' ;'
