@@ -125,7 +125,7 @@ if ($mode == "ajout" || $mode == "update") {
 
     $categorie = CategoriesManager::getList();
     foreach ($categorie as $uneCategorie) {
-        echo '<option value="'.$uneCategorie->getIdCategorie().'"'.if ($uneCategorie->getIdCategorie()==$annonceChoisi->getIdAnnonce())? echo "selected";'>' . $uneCategorie->getLibelleCategorie() . '</option>';
+        echo '<option value="'.$uneCategorie->getIdCategorie().'">' . $uneCategorie->getLibelleCategorie() . '</option>';
     }
 } else {
     echo $affCategorie;

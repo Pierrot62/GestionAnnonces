@@ -22,3 +22,7 @@ foreach ($annonces as $uneannonce)
     </div>
     </article>';
 }
+
+
+
+        echo '<option value="'.$uneCategorie->getIdCategorie().'"'.if ($uneCategorie->getIdCategorie()==$annonceChoisi->getIdAnnonce())? echo "selected";'>' . $uneCategorie->getLibelleCategorie() . '</option>';

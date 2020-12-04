@@ -50,4 +50,13 @@ switch($_GET['mode'])
         session_destroy();
         header("Location:index.php?page=accueil");
     break;
+    //modification
+
+    case ("update"):
+        $utilisateur=new Utilisateurs($_POST);
+        var_dump ($utilisateur);
+        UtilisateursManager::update($utilisateur);
+        header("Location:index.php?page=listeUtilisateur");
+
+    break;
 }

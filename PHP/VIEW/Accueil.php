@@ -10,22 +10,33 @@
 // }
 // else
 // {
-//     $annonces=AnnoncesManager::getList();
+    $annonces=AnnoncesManager::getList();
 
 // }
 
 if (isset($_GET['view'])) {
     $view = $_GET['view'];
-    if (isset($_SESSION['utilisateur'])) {
+    if ($view == "admin"){
+        if (isset($_SESSION['utilisateur'])) {
+            $annonces = AnnoncesManager::getList();
+        } 
+    }else if ($view == "user"){
+        if (isset($_SESSION['utilisateur'])) {
         $annonces = AnnoncesManager::getByUser($_SESSION['utilisateur']);
+    } 
     }
-} else {
-    $categorie = CategoriesManager::findById($_POST['idCategorie']);
-    if ($categorie->getIdCategorie() != '4') {
-        $annonces = AnnoncesManager::getByCategorie($categorie);
-    } else {
-        $annonces = AnnoncesManager::getList();
-    }
+   
+
+
+
+
+// } else {
+//     $categorie = CategoriesManager::findById($_POST['idCategorie']);
+//     if ($categorie->getIdCategorie() != '4') {
+//         $annonces = AnnoncesManager::getByCategorie($categorie);
+//     } else {
+//         $annonces = AnnoncesManager::getList();
+//     }
 }
 
 foreach ($annonces as $uneannonce) {

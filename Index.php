@@ -18,6 +18,7 @@ $routes=[
 	"formInscript"=>["PHP/VIEW/","FormInscript","Formulaire d'inscription"],
 	"FormAnnonces"=>["PHP/VIEW/","FormAnnonces","Formulaire d'annonces"],
 
+	"actionUtilisateurs"=>["PHP/VIEW/","ActionUtilisateurs","Action Utilisateurs"],
 	"actionConnect"=>["PHP/VIEW/","ActionConnect","Action connection"],
 	"actionInscript"=>["PHP/VIEW/","ActionInscript","Action inscription"],
 	"actionAnnonces"=>["PHP/VIEW/","ActionAnnonces","Action annonce"],
@@ -31,6 +32,7 @@ $routes=[
 	"viewannonce"=>["PHP/VIEW/","ViewAnnonce","Détail de l'annonces"],
 	"contactvendeur"=>["PHP/VIEW/","ContactVendeur","Contacter le vendeur"],
 	"listemessage"=>["PHP/VIEW/","ListeMessages","Contacter le vendeur"],
+	"listeUtilisateur"=>["PHP/VIEW/","ListeUtilisateurs","Liste des utilisteurs"],
 
 	"TestannoncesManager"=>["PHP/MODEL/TESTMANAGER/","TestannoncesManager","Test de annonces"],
 	"TestcategoriesManager"=>["PHP/MODEL/TESTMANAGER/","TestcategoriesManager","Test de categories"],
