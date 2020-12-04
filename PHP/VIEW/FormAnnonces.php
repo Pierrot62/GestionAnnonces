@@ -100,8 +100,9 @@ switch ($mode) {
 ?>>
 
 
-<option value="1">Disponible</option>
-<option value="2">Vendu</option>
+    <option value="1" <?php echo ($annonceChoisi->getStatutAnnonce() == 1 ) ? 'selected' : ' ' ; ?> >Disponible</option>
+    <option value="2" <?php echo ($annonceChoisi->getStatutAnnonce() == 2 ) ? 'selected' : ' ' ; ?> >Vendu</option>
+
         </select>
 
         
@@ -125,7 +126,7 @@ if ($mode == "ajout" || $mode == "modif") {
 
     $categorie = CategoriesManager::getList();
     foreach ($categorie as $uneCategorie) {
-        echo '<option value="'.$uneCategorie->getIdCategorie().'"'.if ($uneCategorie->getIdCategorie()==$annonceChoisi->getIdAnnonce())? echo "selected";'>' . $uneCategorie->getLibelleCategorie() . '</option>';
+        echo '<option value="'.$uneCategorie->getIdCategorie().'">' . $uneCategorie->getLibelleCategorie() . '</option>';
     }
 } else {
     echo $affCategorie;
