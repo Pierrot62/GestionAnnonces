@@ -1,7 +1,7 @@
 <nav>
 
     <div class="elmNav">
-    <form action="<?php echo 'Index.php?page=afficheCategorie'; ?>"  method="POST">
+    <form action="<?php echo 'Index.php?page=accueil'; ?>"  method="POST">
         <select name="idCategorie" id="categorie-select">
         <?php $categorie = CategoriesManager::getList();
     foreach ($categorie as $uneCategorie) {
