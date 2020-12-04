@@ -99,14 +99,13 @@ switch ($mode) {
 }
 ?>>
 
-
-    <option value="1" <?php echo ($annonceChoisi->getStatutAnnonce() == 1 ) ? 'selected' : ' ' ; ?> >Disponible</option>
-    <option value="2" <?php echo ($annonceChoisi->getStatutAnnonce() == 2 ) ? 'selected' : ' ' ; ?> >Vendu</option>
+    <option value="1" <?php echo ($mode != "ajout" && $annonceChoisi->getStatutAnnonce() == 1   ) ? 'selected' : ' '; ?> >Disponible</option>
+    <option value="2" <?php echo ($mode != "ajout" && $annonceChoisi->getStatutAnnonce() == 2) ? 'selected' : ' '; ?> >Vendu</option>
 
         </select>
 
-        
-        <?php echo' <input type="hidden" name="idUtilisateur" value="'. $_SESSION['utilisateur']->getIdUtilisateur().'">'; ?>
+
+        <?php echo ' <input type="hidden" name="idUtilisateur" value="' . $_SESSION['utilisateur']->getIdUtilisateur() . '">'; ?>
 
     </div>
 
@@ -126,7 +125,7 @@ if ($mode == "ajout" || $mode == "modif") {
 
     $categorie = CategoriesManager::getList();
     foreach ($categorie as $uneCategorie) {
-        echo '<option value="'.$uneCategorie->getIdCategorie().'">' . $uneCategorie->getLibelleCategorie() . '</option>';
+        echo '<option value="' . $uneCategorie->getIdCategorie() . '">' . $uneCategorie->getLibelleCategorie() . '</option>';
     }
 } else {
     echo $affCategorie;
