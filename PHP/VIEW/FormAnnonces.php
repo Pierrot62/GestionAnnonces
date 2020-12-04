@@ -16,18 +16,18 @@ if (isset($_GET['id'])) // si l'id est renseigné
 switch ($mode) {
     case "ajout":{
             echo '
-            <form action="index.php?page=actionAnnonces&mode=ajout" method="POST">';
+            <form action="index.php?page=actionAnnonces&mode=ajout" method="POST" enctype="multipart/form-data">';
             break;
         }
     case "update":{
             echo '
-            <form action="index.php?page=actionAnnonces&mode=modif" method="POST">
+            <form action="index.php?page=actionAnnonces&mode=modif" method="POST" enctype="multipart/form-data">
         <input name="idAnnonce"  value="' . $annonceChoisi->getIdAnnonce() . '" type="hidden" />';
             break;
         }
     case "delete":{
             echo '
-            <form action="index.php?page=actionAnnonces&mode=delete" method="POST">
+            <form action="index.php?page=actionAnnonces&mode=delete" method="POST" enctype="multipart/form-data">
         <input name="idAnnonce"  value="' . $annonceChoisi->getIdAnnonce() . '" type="hidden" />';
             break;
         }
@@ -48,13 +48,14 @@ switch ($mode) {
     echo 'disabled';
 }
 ?>/>
+
     </div>
     <div class="espace"></div>
     <div>
         <label for="lienImg">Image</label>
     </div>
      <div>
-     <input name="lienImg"  <?php if ($mode != "ajout") {echo 'value="' . $annonceChoisi->getLienImg() . '"';}if ($mode == "delete" || $mode == "edit") {
+     <input type="file" name="lienImg"  <?php if ($mode != "ajout") {echo 'value="' . $annonceChoisi->getLienImg() . '"';}if ($mode == "delete" || $mode == "edit") {
     echo 'disabled';
 }
 ?> />

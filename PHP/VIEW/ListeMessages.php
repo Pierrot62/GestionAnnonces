@@ -36,4 +36,3 @@ if(isset($_GET['view']))
     echo'<button><a href="index.php?page=accueil">Retour</a></button>';
 }
 
-*/

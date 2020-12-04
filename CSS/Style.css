@@ -97,6 +97,10 @@ article{
     align-items: center;
 }
 
+.articleListe{
+    height: 25vh;
+}
+
 .elmNav{
     height: 3vh;
     padding: 1em;
@@ -106,6 +110,8 @@ article{
 .imgAnnonce{
     text-align: center;
     background-color: ightseagreen;
+    height: 100%;
+    width: 100%;
 }
 
 .infoAnnnonce{

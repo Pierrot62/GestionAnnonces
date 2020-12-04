@@ -41,8 +41,8 @@ if (isset($_GET['view'])) {
 
 foreach ($annonces as $uneannonce) {
     $vendeur = UtilisateursManager::findById($uneannonce->getIdUtilisateur());
-    echo '<article>
-    <div class="imgAnnonce"><img src="IMG/imgAnnonce/' . $uneannonce->getLienImg() . '" alt="photo annonce"></div>
+    echo '<article class="articleListe">
+    <div class="imgAnnonce"><img src="' . $uneannonce->getLienImg() . '" alt="photo annonce"></div>
     <div class="divXl">
         <div class="infoAnnnonce">
             <div>' . $uneannonce->getTitreAnnonce() . '</div>
@@ -61,9 +61,7 @@ foreach ($annonces as $uneannonce) {
           <div>
             <a href="index.php?page=FormAnnonces&mode=delete&id=' . $uneannonce->getIdAnnonce() . '">Supprimer</a
             >
-          </div>
-          <div><a href="index.php?page=FormAnnonces&mode=detail&id=' . $uneannonce->getIdAnnonce() . '">Detail</a></div>
-        </div>';
+          ';
     }
     echo '</article>';
 }
