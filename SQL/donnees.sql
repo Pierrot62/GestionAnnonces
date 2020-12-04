@@ -1,6 +1,7 @@
 INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"meubles");
 INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"voitures");
 INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"pc");
+INSERT INTO `categories`(`idCategorie`, `libelleCategorie`) VALUES (NULL,"Toutes categories");
 
 INSERT INTO `roles`(`idRole`, `libelleRole`, `codeRole`) VALUES (NULL,"administrateur",1);
 INSERT INTO `roles`(`idRole`, `libelleRole`, `codeRole`) VALUES (NULL,"utilisateur",2);
