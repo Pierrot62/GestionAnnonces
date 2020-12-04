@@ -39,6 +39,7 @@ $routes=[
 	/******* Pages *******/
 	"viewannonce"=>["PHP/VIEW/","ViewAnnonce","Détail de l'annonces"],
 	"contactvendeur"=>["PHP/VIEW/","ContactVendeur","Contacter le vendeur"],
+	"listemessage"=>["PHP/VIEW/","ListeMessages","Contacter le vendeur"],
 
 	"TestannoncesManager"=>["PHP/MODEL/TESTMANAGER/","TestannoncesManager","Test de annonces"],
 	"TestcategoriesManager"=>["PHP/MODEL/TESTMANAGER/","TestcategoriesManager","Test de categories"],
