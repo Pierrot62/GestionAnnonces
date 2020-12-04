@@ -1,22 +1,22 @@
 <?php
-var_dump($_POST);
-$categorie=CategoriesManager::findById($_POST['idCategorie']);
 
+$categorie=CategoriesManager::findById($_POST['idCategorie']);
+var_dump($categorie);
 if ($categorie != '4')
 {
-    $liste=AnnoncesManager::getByCategorie($categorie);
-    var_dump($liste);
+    $annonces=AnnoncesManager::getByCategorie($categorie);
+    var_dump($annonces);
 }
 else
 {
-    $liste=AnnoncesManager::getList();
-    var_dump($liste);
+    $annonces=AnnoncesManager::getList();
+    var_dump($annonces);
 }
 
 
 
 
-// foreach ($liste as $uneannonce)
+// foreach ($annonces as $uneannonce)
 // {
 //     $vendeur=UtilisateursManager::findById($uneannonce->getIdUtilisateur());
 //     echo'<article>
