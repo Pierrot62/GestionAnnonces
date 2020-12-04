@@ -8,6 +8,19 @@
     <div class="elmNav">
         <button>Rechercher</button>
     </div>
+    <div class="elmNav">
+    <div class="lang">
+
+            <a href="<?php echo $uri; ?>lang=EN">
+                <img src="./IMG/EN.jpg" alt="drapeaux anglais">
+            </a>
+            
+            <a href="<?php echo $uri; ?>lang=FR">
+                <img src="./IMG/FR.jpg" alt="drapeaux francais">
+            </a>
+        
+    </div>
+    </div>
     <?php
     if (isset($_SESSION['utilisateur']))
     {

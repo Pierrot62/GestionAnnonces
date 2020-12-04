@@ -119,9 +119,9 @@ switch ($mode) {
         <select name="idCategorie" <?php if ($mode == "edit" || $mode == "delete") {
     echo 'disabled';
 }
-?> >
+?>>
 <?php
-if ($mode == "ajout" || $mode == "modif") {
+if ($mode == "ajout" || $mode == "update") {
 
     $categorie = CategoriesManager::getList();
     foreach ($categorie as $uneCategorie) {
