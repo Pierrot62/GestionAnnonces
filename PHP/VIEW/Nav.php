@@ -24,15 +24,9 @@
     <?php
     if (isset($_SESSION['utilisateur']))
     {
-<<<<<<< HEAD
-       echo' <div class="elmNav"><button><a href="index.php?page=accueil&view=user">Mes Annonces</a></button></div>
-        <div class="elmNav"><button><a href="index.php?page=listemessage">Mes Messages</a></button></div>
-        <div class="elmNav"><button><a href="index.php?page=FormAnnonces&mode=ajout">Ajouter une Annonce</a></button></div>';
-=======
        echo' <div class="elmNav"><button><a href="index.php?page=accueil&view=user">'.langue('Mes Annonces').'</a></button></div>
         <div class="elmNav"><button><a href="index.php?page=ListeMessage">'.langue('Mes Messages').'</a></button></div>
         <div class="elmNav"><button><a href="index.php?page=FormAnnonces&mode=ajout">'.langue('Ajouter une Annonce').'</a></button></div>';
->>>>>>> 5d9b52b5c89ebc8de0f1f263aa9f5df3682ccc5e
     }
     ?>
 </nav>
