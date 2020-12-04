@@ -27,6 +27,7 @@ INSERT INTO `messages`(`idMessage`, `libelleMessage`, `contenueMessage`, `idDest
 INSERT INTO `messages`(`idMessage`, `libelleMessage`, `contenueMessage`, `idDestinataire`, `idUtilisateur`) VALUES (NULL,"possible de negocier?","je vous propose 5 euros pour ce produit",2,3);
 
 
+
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("1","Voiture","FR","Voiture");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("2","Voiture","EN","Car");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("3","Vetement","FR","Vetement");
@@ -49,7 +50,7 @@ insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("19","Pri
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("20","Prix","EN","price");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("21","Date de publication","FR","Date de publication");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("22","Date de publication","EN","publication date");
-insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("23","Statut de l'annonce","FR","Statut de lannonce");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("23","Statut de l'annonce","FR","Statut de l'annonce");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("24","Statut de l'annonce","EN","ad status");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("25","Disponible","FR","Disponible");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("26","Disponible","EN","Available");
@@ -63,3 +64,25 @@ insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("33","pc"
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("34","pc","EN","Computer");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("35","Retour","FR","Retour");
 insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("36","Retour","EN","return");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("37","Mes Messages","FR","Mes Messages");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("38","Mes Messages","EN","My Messages");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("39","Liste utilisateurs","FR","Liste des Utilisateurs");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("40","Liste utilisateurs","EN","User List");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("41","Liste Annonces","FR","Liste des Annonces");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("42","Liste Annonces","EN","Announcements List");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("43","Modifier","FR","Modifier");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("44","Modifier","EN","Modify");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("45","Supprimer","FR","Supprimer");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("46","Supprimer","EN","Delete");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("47","Consulter","FR","Consulter");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("48","Consulter","EN","View");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("49","publiée le","FR","Publiée le");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("50","publiée le","EN","Published");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("51","Par","FR","Par");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("52","Par","EN","By");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("53","Statut","FR","Statut");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("54","Statut","EN","Status");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("55","Envoyé par","FR","Envoyé par");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("56","Envoyé par","EN","Send by");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("57","Aucun message à afficher","FR","Aucun message à afficher");
+insert into langue (idLangue,nomLangue,codeLangue,texteLangue) Values ("58","Aucun message à afficher","EN","No message to display");

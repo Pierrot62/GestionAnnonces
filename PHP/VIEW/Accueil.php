@@ -54,25 +54,25 @@ foreach ($annonces as $uneannonce) {
     <div class="divXl">
         <div class="infoAnnnonce">
             <div>' . $uneannonce->getTitreAnnonce() . '</div>
-            <div><a href="index.php?page=viewannonce&id=' . $uneannonce->getIdAnnonce() . '">Detail</a></div>
+            <div><a href="index.php?page=viewannonce&id=' . $uneannonce->getIdAnnonce() . '">'.langue('Consulter').'</a></div>
         </div>
         <div class=" infoAnnnonce">
-            <div>Prix :' . ' ' . $uneannonce->getPrixAnnonce() . ' € </div>
-            <div>Mis en ligne le :' . $uneannonce->getDatePublication() . '</div>
-            <div>Par :' . ' ' . $vendeur->getNomUtilisateur() . '</div>
-            <div>Statut :' . ' ' . ($uneannonce->getStatutAnnonce() == 1 ? "disponible" : "vendu") . '</div>
+            <div>'.langue('Prix').':'.' '. $uneannonce->getPrixAnnonce().' € </div>
+            <div>'.langue('Publiée le').':'.' '.$uneannonce->getDatePublication().'</div>
+            <div>'.langue('Par').':'.' '. $vendeur->getNomUtilisateur().'</div>
+            <div>'.langue('Statut').':'.' '.($uneannonce->getStatutAnnonce() == 1 ? langue('Disponible') : langue('Vendu')).'</div>
         </div>
     </div>';
     if (isset($_GET['view'])) {
         echo '<div class="crud">
-          <div><a href="index.php?page=FormAnnonces&mode=update&id=' . $uneannonce->getIdAnnonce() . '">Modifier</a></div>
+          <div><a href="index.php?page=FormAnnonces&mode=update&id=' . $uneannonce->getIdAnnonce() . '">'.langue('Modifier').'</a></div>
           <div>
-            <a href="index.php?page=FormAnnonces&mode=delete&id=' . $uneannonce->getIdAnnonce() . '">Supprimer</a
+            <a href="index.php?page=FormAnnonces&mode=delete&id=' . $uneannonce->getIdAnnonce() . '">'.langue('Supprimer').'</a
             >
           ';
     }
     echo '</article>';
 }
 if (isset($_GET['view'])) {
-    echo '<button><a href="index.php?page=accueil">Retour</a></button>';
+    echo '<button><a href="index.php?page=accueil">'.langue('Retour').'</a></button>';
 }

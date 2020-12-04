@@ -4,7 +4,7 @@ if(empty($messages))
 {
     echo '<article>
         <div class="infoAnnnonce center">
-            <h2>Aucun Message à afficher</h2>
+            <h2>'.langue('Aucun message à afficher').'</h2>
         </div>
       </article>';
 }
@@ -15,14 +15,14 @@ foreach ($messages as $unmessage)
     echo'<article>
         <div class="divXl">
         <div class="infoAnnnonce">
-            <div>Titre :'.$unmessage->getLibelleMessage().'</div>
-            <div>Envoye par :'.$expediteur->getNomUtilisateur().'</div>
+            <div>'.langue('titre').' :'.$unmessage->getLibelleMessage().'</div>
+            <div>'.langue('Envoyé par').' :'.$expediteur->getNomUtilisateur().'</div>
         </div>
         <div class="infoAnnnonce">
             <div>'.$unmessage->getContenueMessage().'</div>
         </div>
         <div>
-          <a href="index.php?page=traitementMessage&mode=delete&id='.$unmessage->getIdMessage().'">Supprimer</a>
+          <a href="index.php?page=traitementMessage&mode=delete&id='.$unmessage->getIdMessage().'">'.langue('Supprimer').'</a>
         </div>
     </div>
     </article>';
