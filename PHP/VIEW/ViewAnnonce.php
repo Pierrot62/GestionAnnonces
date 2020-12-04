@@ -10,7 +10,7 @@
         <div>
         <div class="titre">'.$annonce->getTitreAnnonce().'</div>
         <div class="imgView">
-            <img src="IMG/imgAnnonce/'.$annonce->getLienImg().'" alt="Immage Annonce">
+            <img src="'.$annonce->getLienImg().'" alt="Immage Annonce">
         </div>
         <div class="contenueAnnonce">'.$annonce->getLibelleAnnonce().'</div>
         <div class="infoAnnnonce">
