@@ -63,7 +63,7 @@ class LangueManager
     public static function findByCodes($codeLangue,$nomLangue)
 	{
 		$db=DbConnect::getDb();
-		$q=$db->prepare("SELECT langue FROM Langue WHERE nomLangue =:nomLangue and codeLangue = :codeLangue");
+		$q=$db->prepare("SELECT texteLangue FROM Langue WHERE nomLangue =:nomLangue and codeLangue = :codeLangue");
 		$q->bindValue(":nomLangue", $nomLangue,PDO::PARAM_STR);
 		$q->bindValue(":codeLangue", $codeLangue,PDO::PARAM_STR);
 		$q->execute();
@@ -71,7 +71,7 @@ class LangueManager
 		if($results != false)
 		{
 			
-			return $results['langue'];  // on ne retourne que le texte, pas un objet
+			return $results['texteLangue'];  // on ne retourne que le texte, pas un objet
 		}
 		else
 		{
