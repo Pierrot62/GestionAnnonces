@@ -32,7 +32,7 @@ if (substr($uri, strlen($uri) - 1) == "/") // se termine par /
 if (isset($_SESSION['utilisateur'])) {
     echo '<div>' . $_SESSION['utilisateur']->getNomUtilisateur() . ' ' . $_SESSION['utilisateur']->getPrenomUtilisateur() . '</div>
         <div>
-            <button><a href="index.php?page=actionConnect&mode=disconnect">deconnexion</a></button>
+            <button><a href="index.php?page=actionConnect&mode=disconnect">'.langue('deconnexion').'</a></button>
         </div>';
 } else {
     echo '<div class="elmHeader">

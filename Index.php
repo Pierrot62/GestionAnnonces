@@ -8,16 +8,7 @@ DbConnect::init();
 
 session_start();
 
-/******Les langues******/
-/***On récupère la langue***/
-if (isset($_GET['lang']))
-{
-	$_SESSION['lang'] = $_GET['lang'];
-}
 
-/***On récupère la langue de la session/FR par défaut***/
-$lang=isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
-/******Fin des langues******/
 
 $routes=[
 	"default"=>["PHP/VIEW/","Accueil","Accueil"],
@@ -46,6 +37,28 @@ $routes=[
 	"TestrolesManager"=>["PHP/MODEL/TESTMANAGER/","TestrolesManager","Test de roles"],
 	"TestutilisateursManager"=>["PHP/MODEL/TESTMANAGER/","TestutilisateursManager","Test de utilisateurs"]
 ];
+
+/******Les langues******/
+/***On récupère la langue***/
+if (isset($_GET['lang']))
+{
+	$_SESSION['lang'] = $_GET['lang'];
+}
+
+/***On récupère la langue de la session/FR par défaut***/
+$lang=isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
+
+/**
+ * fonction qui ramène le texte dans la bonne langue
+ */
+function langue($nomLangue)
+{
+   
+    global $lang; //on appel la variable globale
+    
+    return LangueManager::findByCodes($lang, $nomLangue);
+}
+/******Fin des langues******/
 
 if(isset($_GET["page"]))
 {

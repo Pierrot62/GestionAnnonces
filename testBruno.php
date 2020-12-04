@@ -38,11 +38,11 @@ spl_autoload_register("chargerClasse");
 
 */
 
-include "PHP/CONTROLLER/Utilisateurs.Class.php";
+include "PHP/CONTROLLER/Langue.Class.php";
 include "PHP/CONTROLLER/Categories.Class.php";
 include "PHP/CONTROLLER/Annonces.Class.php";
 include "PHP/CONTROLLER/Parametres.Class.php";
-include "PHP/MODEL/UtilisateursManager.Class.php";
+include "PHP/MODEL/LangueManager.Class.php";
 include "PHP/MODEL/CategoriesManager.Class.php";
 include "PHP/MODEL/AnnoncesManager.Class.php";
 include "PHP/MODEL/DbConnect.Class.php";
@@ -74,9 +74,9 @@ DbConnect::Init();
 //var_dump($ticket);
 //var_dump($mode);
 //echo 'On ajoute un objet TVA <br>';
-$pNew = new Utilisateurs(["nomUtilisateur"=>"mayeux","prenomUtilisateur"=>"bruno","emailUtilisateur"=>"kkkk","pseudoUtilisateur"=>"uuuu","mdpUtilisateur"=>"opop","idRole"=>2,"telUtilisateur"=>"0303030303"]);
-var_dump($pNew);
-UtilisateursManager::add($pNew);
+//$pNew = new Utilisateurs(["nomUtilisateur"=>"mayeux","prenomUtilisateur"=>"bruno","emailUtilisateur"=>"kkkk","pseudoUtilisateur"=>"uuuu","mdpUtilisateur"=>"opop","idRole"=>2,"telUtilisateur"=>"0303030303"]);
+//var_dump($pNew);
+//UtilisateursManager::add($pNew);
 
 //On teste la suppression
 //echo 'On supprime un article <br>';
@@ -101,3 +101,6 @@ UtilisateursManager::add($pNew);
 //	echo $elt->toString()."\n";
 //}
 //include "PHP/VIEW/Footer.php";
+
+
+$texte=LangueManager::findByCodes("EN",)
