@@ -6,9 +6,9 @@ body {
     padding: 0;
 }
 body{
-    background-color: deeppink;
+    /* background-color: deeppink; */
 
-    /* background-color: #091834; */
+    background-color: #091834;
 }
 
 html{
@@ -90,14 +90,15 @@ article{
     margin: 1em 0em;
     margin-left: 15vw;
     width: 70vw;
-    /* background-color: #0071BD; */
-    background-color: chartreuse;
+    background-color: #0071BD;
+    /* background-color: chartreuse; */
     display: flex;
     min-height: 20vh;
     align-items: center;
 }
 
 .elmNav{
+    height: 3vh;
     padding: 1em;
     text-align: center;
 }
@@ -165,7 +166,7 @@ input{
 
 label{
     font-size: 1.5em;
-    color: black; /*color : white; apres  */
+    color: white; /*color : white; apres  */
 }
 
 input::placeholder {  
@@ -193,3 +194,7 @@ input:-ms-input-placeholder {
     width: 53%;
 }
 
+.lang{
+    display: flex;
+    height: 100%;
+}
