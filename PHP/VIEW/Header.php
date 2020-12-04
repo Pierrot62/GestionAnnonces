@@ -49,7 +49,7 @@ else
     { 
         echo'<div>'.$_SESSION['utilisateur']->getNomUtilisateur().' '.$_SESSION['utilisateur']->getPrenomUtilisateur().'</div>
         <div>
-            <button><a href="index.php?page=actionConnect&mode=disconnect">deconnexion</a></button>
+            <button><a href="index.php?page=actionConnect&mode=disconnect">'.langue('deconnexion').'</a></button>
         </div>';
     }
     else{
