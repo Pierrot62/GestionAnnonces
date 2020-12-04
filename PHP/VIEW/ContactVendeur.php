@@ -27,7 +27,7 @@
 
         <div class="colonne">
             <div>Message au vendeur pour l\'annonce n°'.$annonce->getIdAnnonce().'</div>
-            <form action="index.php?page=traitementmessage" method="POST">
+            <form action="index.php?page=traitementMessage&mode=new" method="POST">
                <div><input name="idAnnonce" value="'.$annonce->getIdAnnonce().'" hidden /></div>
                <div><input name="idDestinataire" value="'.$vendeur->getIdUtilisateur().'" hidden /></div> 
 

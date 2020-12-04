@@ -22,7 +22,7 @@ foreach ($messages as $unmessage)
             <div>'.$unmessage->getContenueMessage().'</div>
         </div>
         <div>
-          <a href="index.php?page=actionMessages&id='.$unmessage->getIdMessage().'">Supprimer</a>
+          <a href="index.php?page=traitementMessage&mode=delete&id='.$unmessage->getIdMessage().'">Supprimer</a>
         </div>
     </div>
     </article>';
