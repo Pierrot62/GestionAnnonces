@@ -52,6 +52,14 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `idRole` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `langue`;
+CREATE TABLE IF NOT EXISTS `langue` (
+  `idLangue` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nomLangue` varchar(50) NOT NULL,
+  `codeLangue` varchar(50) NOT NULL,
+  `texteLangue` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 ALTER TABLE `annonces` ADD CONSTRAINT `FK_annonces_categories` FOREIGN KEY (`idCategorie`) REFERENCES `categories` (`idCategorie`);
 ALTER TABLE `annonces` ADD CONSTRAINT `FK_annonces_utilisateurs` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateurs` (`idUtilisateur`);
 
