@@ -38,6 +38,14 @@ if (isset($_GET['view'])) {
 //         $annonces = AnnoncesManager::getList();
 //     }
 }
+if(empty($annonces))
+{
+    echo '<article>
+        <div class="infoAnnnonce center">
+            <h2>Aucune Annonce à afficher</h2>
+        </div>
+      </article>';
+}
 
 foreach ($annonces as $uneannonce) {
     $vendeur = UtilisateursManager::findById($uneannonce->getIdUtilisateur());

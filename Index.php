@@ -22,6 +22,7 @@ $routes=[
 	"actionConnect"=>["PHP/VIEW/","ActionConnect","Action connection"],
 	"actionInscript"=>["PHP/VIEW/","ActionInscript","Action inscription"],
 	"actionAnnonces"=>["PHP/VIEW/","ActionAnnonces","Action annonce"],
+	"actionMessages"=>["PHP/VIEW/","ActionMessage","Action annonce"],
 	"traitementMessage"=>["PHP/VIEW/","TraitementMessage","Action inscription"],
 
 	/***routes de test affichage par categories */
@@ -31,7 +32,7 @@ $routes=[
 	/******* Pages *******/
 	"viewannonce"=>["PHP/VIEW/","ViewAnnonce","Détail de l'annonces"],
 	"contactvendeur"=>["PHP/VIEW/","ContactVendeur","Contacter le vendeur"],
-	"listemessage"=>["PHP/VIEW/","ListeMessages","Contacter le vendeur"],
+	"ListeMessage"=>["PHP/VIEW/","ListeMessages","Contacter le vendeur"],
 	"listeUtilisateur"=>["PHP/VIEW/","ListeUtilisateurs","Liste des utilisteurs"],
 
 	"TestannoncesManager"=>["PHP/MODEL/TESTMANAGER/","TestannoncesManager","Test de annonces"],
